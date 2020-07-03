@@ -24,6 +24,8 @@ fi
 
 ACTION=$(git branch -vv | egrep "^\*" | awk '{ print $4 '})
 
+#######################
+
 echo "tracking=$ACTION"
 
 if [[ ! "$ACTION" =~ "origin" ]]; then
