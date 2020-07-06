@@ -40,8 +40,8 @@ fi
 
 
 # update remote
-echo "Fetching from $REMOTE..."
-git fetch $REMOTE
+# echo "Fetching from $REMOTE..."
+# git fetch $REMOTE
 
 
 # pull, using rebase if configured
