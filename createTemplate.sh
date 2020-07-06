@@ -15,12 +15,15 @@ ADHOC_BRANCHES="dev,feacher,release,held"
 REMOTE="origin"
 PROJECT_TYPE=$1
 
-if $3 ; then
+if [ $3 ]; then
 	START_BRANCH=$3
 else
 	START_BRANCH='master'
 fi
 ######################
+
+# copy all files
+shopt -s dotglob
 
 if [ $1 == "project" ]; then
 	
@@ -74,8 +77,23 @@ else
 	exit 0
 fi
 
+
+if [ START_BRANCH ] ; then
+  echo "Switching to existing branch..."
+  git checkout $START_BRANCH
+
+  TRACKING=$(git branch -vv | grep "*" | awk '{ print $4 '})
+  
+  git branch --set-upstream-to $START_BRANCH
+  
+  git checkout -b $START_BRANCH --track $START_BRANCH
+
+fi
+
+
+
 echo 'Dropping to basic templates'
-#rm -r $DIR/template
+rm -r $DIR/template
 
 echo 'Adding files to gitignore'
 echo 'createTemplate.sh' >> .gitignore
@@ -83,33 +101,7 @@ echo 'createSSHKey.sh' >> .gitignore
 echo 'changeOrigin.sh' >> .gitignore
 
 
-# If local exists already, switch to it
-if [ -n "$local_branch_exists" ] && [ ! "$local_branch_exists" == '' ]; then
-  echo "👓  Switching to existing local branch..."
-  git checkout $branch
 
-  # Track remote branch if not already
-  if [ -n "$remote_branch_exists" ] && [ ! "$remote_branch_exists" == '' ]; then
-    tracking=$(git branch -vv | grep "*" | awk '{ print $4 '})
-    # echo "Remote branch exists. Local branch is tracking: $tracking"
-    if [[ ! "$tracking" =~ "$remote" ]]; then
-      echo "⚒️  Your local branch is not tracking the corresponding remote branch, fixing..."
-      git branch --set-upstream-to $branch $remote/$branch
-    fi
-  # else
-  #   echo "Remote branch does not exist, not doing anything"
-  fi
-
-# If remote exists, create a local branch that tracks the remote
-elif [ -n "$remote_branch_exists" ] && [ ! "$remote_branch_exists" == '' ]; then
-  echo "📡  Tracking existing remote branch '$remote_branch_exists'..."
-  git checkout -b $branch --track $remote/$branch
-
-# Otherwise create a new local branch
-else
-  echo "✏️  Creating new local branch..."
-  git checkout -b $branch --no-track
-fi
 
 
 
