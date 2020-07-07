@@ -1,5 +1,9 @@
 # !/bin/bash
 ######################
+# 
+# !!!-> NEED TO BE TESTED <-!!!
+#
+######################
 # bash comiber2repo.sh -method integrated_branch integration_branch remote
 # $1 - method ( -f = fast | -s = subtree | -o origin method)
 # $2 - integrated_branch 
