@@ -70,7 +70,7 @@ refs="$PBRANCH...$BRANCH"
 echo "Pushed a branch '$BRANCH' remotely"
 echo ""
 echo "Pushed to"
-git remote show $remote -n | grep Push | awk '{ print $3 }'
+echo $(git remote show $remote -n | grep Push | awk '{ print $3 }')
 
 
 
