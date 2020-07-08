@@ -10,7 +10,7 @@ $ ./script parameter1 .. parameterN
 $ 
 ```
 
-### Acknowledgments :thumbsup:
+### Acknowledgments
 
 > **[?]** Описание особенностей использование или используемых библиотек (полезно, если есть что-то не стандартное)
 
