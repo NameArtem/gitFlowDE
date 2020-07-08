@@ -16,6 +16,7 @@
 
 > **[?]** Как начать использовать данные проекта
 
+<a name="instal"></a>
 ```python
 # import as usually
 import MY_BEAUTYFUL_LIB
@@ -24,6 +25,8 @@ import MY_BEAUTYFUL_LIB
 ## Usage
 
 > **[?]** Направление проекта
+
+<a name="usage"></a>
 
 ### Usage
 
