@@ -1,118 +1,88 @@
-# Git flow for DE/DS
-> Этот проект содержит шаблон git flow для Data Engineers / Data Scientists 
-> Шаблоны проектов можно сделать отдельными репозиториями в [git](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository)
+# Project template
+> Описание проект
+
+<br>
 
 ### Содержание
+* [Install](#install)
+* [Usage](#usage)
+* [Contributing & Collaborating & CodeReviewing](#contributing-collaborating-codeReviewing)
+* [Acknowledgments](#acknowledgments)
+* [Changelog](#changelog)
+* [Data metrics](#data-metrics)
+* [To-Do](#to-do)
+* [Releases](#releases)
+<br>
 
-* [Info](#info)
-* [Инспользование](#using)
+### Install
 
-### Info
+> **[?]** Как начать использовать данные проекта
 
-* Шаблон [AdHoc](https://github.com/NameArtem/gitFlowDE/tree/master/template/adHoc)
-* Шаблон [базового проекта DS/DE](https://github.com/NameArtem/gitFlowDE/tree/master/template/project)
-
-`описать, как разворачивать`
-
-### Использование
-
-**Создание проекта (по шаблону) **
-
-Загрузка шаблона проекта выполняется скриптом `createTemplate.sh`. 
-
-```bash
-bash createTemplate.sh ТИП_ПРОЕКТА -ACTION БАЗОВАЯ_ВЕТКА
-
-# доступные -ACTION (определение способа действия)
-# -bb - включить базовые ветки
-# -n - шаблон без веток
+<a name="instal"></a>
+```python
+# import as usually
+import MY_BEAUTYFUL_LIB
 ```
 
-------------------------
+## Usage
 
-**Загрузка проекта**
+> **[?]** Направление проекта
 
-Загрузка проекта с git осуществлена в `pull.sh`. 
+<a name="usage"></a>
 
-```bash
-bash pull.sh -r ИМЯ_ВЕТКИ ИМЯ_REMOTE
+### Usage
 
-# доступные -ACTION (определение способа действия)
-# -r - rebase (с интеграцией изменений в текущую ветку)
-# -nr - no rebase (просто получить проект с remote)
-```
+> **[?]** Как использовать проект
 
-------------------------
+### Contributing & Collaborating & CodeReviewing
 
-**Загрузка проекта на гит**
+<a name="contributing-collaborating-codeReviewing"></a>
 
-Автоматизация загрузки проекта на git `push.sh`. 
+> **[?]** Ссыли на правила взаимодействия по проекту. Примеры:
 
-```bash
-bash push.sh -ACTION ИМЯ_REMOTE В_ВЕТКУ
+[CONTRIBUTING.md](CONTRIBUTING.md)
 
-# доступные -ACTION (определение способа действия)
-# -с - загрузить по обычному (имя remote и название ветки не требуется). Быстрый и простой способ
-# -s - указать имя remote и название ветки куда будет делаться коммит
+[COLLABORATING.md](COLLABORATING.md)
 
-```
+[CODEREVIEW.md](CodeReview.md)
 
-------------------------
+Для крос-командного проекта необходимо вести [список участников](CONTRIBUTORS.md)
 
-**Мердж**
+### Acknowledgments :thumbsup:
 
-Для быстрого мерджа проекта используйте  `mergeTo.sh`. В текущую ветку, которой вы нахолитесь, будет добавлены изменения из другой ветки
+<a name="acknowledgments"></a>
 
-```bash
-bash mergeTo.sh ИЗ_ВЕТКИ
-```
-
-------------------------
-
-**Создание/Изменение origin**
-
-Для добавления или изменения GIT репозитория проекта, можно воспользоваться файлом `changeAddOrigin.sh`. 
-
-```bash
-bash changeAddOrigin.sh -ACTYION REMOTE_ИМЯ GIT_ПУТЬ
-
-# доступные -ACTION (определение способа действия)
-# -a - add  (добавить)
-# -c - change (изменит)
-# -r - rename (перименовать)
-```
-
-------------------------
-
-**Создание ветки**
-
-Для добавления новой ветки, которая не входит в базовый шаблон (так как они уже добавлены), можно воспользоваться файлом `addBranch.sh`. 
-
-```bash
-bash addBranch.sh ИМЯ_РОДИТЕЛЬСКОЙ_ВЕТКИ ЗАДАЧА_В_TASK_MANAGER
-```
-
-------------------------
+> **[?]** Описание особенностей использование или используемых библиотек (полезно, если есть что-то не стандартное):
 
 
-**Создание SSH ключа**
+### Changelog :memo:
 
-Ключь ssh нужен в гит, чтобы не писать логин и пароль при коммитах. Воспользуйтесь  `bash createSSHKey.sh` для генерации ключа.
-Используя инструкции в командной строке вы добавите себе ключ. 
-После выполнения ключа, его публичная часть будет добавлена в буффер обмена, вам останется просто добавть в настрокий [аккаунта](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+<a name="changelog"></a>
 
-```bash
-bash createSSHKey.sh
-```
-
-------------------------
+> **[?]** В основном readme или в специальном файле стоит вести `CHANGELOG`, который выступает в виде истории изменений `HISTORY`. Также можно использовать Wiki
 
 
+### Data metrics
+
+<a name="data-metrics"></a>
+
+> **[?]** Описываем основные результаты. Можно поставить скриншоты или результаты работы, котоыре отражают результаты data-модели или base line
 
 
-### To-Do
+### To-Do :man:
 
-- [ ] - сделать слияние двух проектов
-- [ ] - провести командный тест
-- [ ] - сделать функции и уйти от линейности
+<a name="to-do"></a>
+
+> **[?]** Если проект в разработке, то можно проецировать ключевые этапы. Если проект будет _"заморожен"_, то поможет быстро вернуться к проекту
+
+- [x] Сделать base line
+- [ ] Добавить новые данные в модель
+- [ ] "Тюнинг" модели ...
+
+
+### Releases
+
+<a name="releases"></a>
+
+> **[?]** Заполняется по правилу: tag релизала - для чего зделан, его особенности и тп.
 

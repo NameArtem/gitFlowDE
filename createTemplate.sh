@@ -29,7 +29,7 @@ if [ $1 == "project" ]; then
 	
 	echo "Adding project template..."
 		
-	$(cp -r $DIR/template/project/* $DIR)
+	$(cp -r $DIR/templates/project/* $DIR)
 		
 	# add --bare | cloning abilities
 	$(git init)
