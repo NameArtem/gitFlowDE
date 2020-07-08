@@ -34,6 +34,8 @@ import MY_BEAUTYFUL_LIB
 
 ### Contributing & Collaborating & CodeReviewing
 
+<a name="contributing-collaborating-codeReviewing"></a>
+
 > **[?]** Ссыли на правила взаимодействия по проекту. Примеры:
 
 [CONTRIBUTING.md](CONTRIBUTING.md)
@@ -46,10 +48,14 @@ import MY_BEAUTYFUL_LIB
 
 ### Acknowledgments :thumbsup:
 
+<a name="acknowledgments"></a>
+
 > **[?]** Описание особенностей использование или используемых библиотек (полезно, если есть что-то не стандартное):
 
 
 ### Changelog :memo:
+
+<a name="changelog"></a>
 
 > **[?]** В основном readme или в специальном файле стоит вести `CHANGELOG`, который выступает в виде истории изменений `HISTORY`. Также можно использовать Wiki
 
