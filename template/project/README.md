@@ -6,9 +6,9 @@
 ## Содержание
 * [Install](#install)
 * [Usage](#usage)
-* [Contributing & Collaborating & CodeReviewing](#contributing-collaborating-codereviewing)
-* [Acknowledgments](#acknowledgments)
-* [Changelog](#changelog)
+* [Contributing & Collaborating & CodeReviewing](#Contributing & Collaborating & CodeReviewing
+* [Acknowledgments](#Acknowledgments)
+* [Changelog](#Changelog)
 
 <br>
 
