@@ -41,11 +41,13 @@ fi
 
 # update remote
 # echo "Fetching from $REMOTE..."
-# git fetch $REMOTE
+
+echo "Fetching from $REMOTE..."
+git fetch $REMOTE $BRANCH
 
 
 # pull, using rebase if configured
-if [ $REBASE != "" ]; then
+if [ -z $REBASE ]; then
 	git pull $REBASE $REMOTE $BRANCH
 else
 	git pull $REMOTE $BRANCH
