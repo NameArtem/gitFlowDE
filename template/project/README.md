@@ -1,4 +1,4 @@
-# ReadMe template
+# Project template
 > Описание проект
 
 <br>
