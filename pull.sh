@@ -44,6 +44,7 @@ fi
 
 echo "Fetching from $REMOTE..."
 git fetch $REMOTE $BRANCH
+# git fetch $REMOTE
 
 
 # pull, using rebase if configured
