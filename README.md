@@ -97,7 +97,9 @@ bash addBranch.sh ИМЯ_РОДИТЕЛЬСКОЙ_ВЕТКИ ЗАДАЧА_В_TAS
 
 **Создание SSH ключа**
 
-Д `bash createSSHKey.sh`. 
+Ключь ssh нужен в гит, чтобы не писать логин и пароль при коммитах. Воспользуйтесь  `bash createSSHKey.sh` для генерации ключа.
+Используя инструкции в командной строке вы добавите себе ключ. 
+После выполнения ключа, его публичная часть будет добавлена в буффер обмена, вам останется просто добавть в настрокий [аккаунта](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
 ```bash
 bash createSSHKey.sh
