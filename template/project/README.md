@@ -3,12 +3,12 @@
 
 <br>
 
-## Содержание
+### Содержание
 * [Install](#install)
 * [Usage](#usage)
-* [Contributing & Collaborating & CodeReviewing](#Contributing & Collaborating & CodeReviewing
-* [Acknowledgments](#Acknowledgments)
-* [Changelog](#Changelog)
+* [Contributing & Collaborating & CodeReviewing](#contributing-collaborating-codeReviewing)
+* [Acknowledgments](#acknowledgments)
+* [Changelog](#changelog)
 
 <br>
 
