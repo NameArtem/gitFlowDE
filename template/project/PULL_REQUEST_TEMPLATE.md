@@ -1,28 +1,22 @@
-<!--- Provide a general summary of your changes in the Title above -->
+# Pull Request template
 
-## Description
-<!--- Describe your changes in detail -->
+> Используется для создания запросов на пуллинг из веток по задачам в основную ветку направления 
 
-## Motivation and Context
-<!--- Why is this change required? What problem does it solve? -->
-<!--- If it fixes an open issue, please link to the issue here. -->
 
-## How Has This Been Tested?
-<!--- Please describe in detail how you tested your changes. -->
-<!--- Include details of your testing environment, tests ran to see how -->
-<!--- your change affects other areas of the code, etc. -->
+### Описание
 
-## Screenshots (if appropriate):
+> Опишите основные изменения или установите ссылку на заду из task-menager
 
-## Types of changes
-<!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+### Тестирование
 
-## Checklist:
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
-<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
-- [ ] My code follows the code style of this project.
-- [ ] My change requires a change to the documentation.
-- [ ] I have updated the documentation accordingly.
+> **[?]** Проведено тестирование (описание тестов)
+
+### Ключевые изменения
+- [x] Исправлена выгрузка (согласно задаче - №)
+- [x] На основе изменений были переделаны функции
+- [x] Изменен тип данных с int на decim
+
+### Лист проверки ревьюера
+- [x] Код соответсвует установленному стилю
+- [x] Нет вложенных циклов (больше 2 вложений) 
+- [ ] ...
