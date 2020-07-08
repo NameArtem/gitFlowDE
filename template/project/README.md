@@ -9,6 +9,8 @@
 * [Contributing & Collaborating & CodeReviewing](#contributing-collaborating-codeReviewing)
 * [Acknowledgments](#acknowledgments)
 * [Changelog](#changelog)
+* [Data metrics](#data-metrics)
+* [To-Do](#to-do)
 
 <br>
 
@@ -62,10 +64,14 @@ import MY_BEAUTYFUL_LIB
 
 ### Data metrics
 
+<a name="data-metrics"></a>
+
 > **[?]** Описываем основные результаты. Можно поставить скриншоты или результаты работы, котоыре отражают результаты data-модели или base line
 
 
 ### To-Do :man:
+
+<a name="to-do"></a>
 
 > **[?]** Если проект в разработке, то можно проецировать ключевые этапы. Если проект будет _"заморожен"_, то поможет быстро вернуться к проекту:
 
