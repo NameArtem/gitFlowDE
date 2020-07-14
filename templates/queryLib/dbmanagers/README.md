@@ -1,6 +1,7 @@
 # Helpful Oracle SCRIPTS
 
 > Based on Jonathan Lewis | Jared Still(@jkstill) | Michael Polaski | Tim Hall and other the best practices
+
 > 'quite old but still works'
 
 ### BACKUP and RECOVERY:
