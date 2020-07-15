@@ -172,4 +172,4 @@ bash createSSHKey.sh
 
 <a name="releases"></a>
 
-* v.0.1 - релиз для статьи о DE git flow (сделан MVP процесса, готов к постой )
+* v.0.1 - релиз для статьи о DE git flow (сделан MVP процесса, готов к публикации)
