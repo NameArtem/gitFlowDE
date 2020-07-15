@@ -1,88 +1,173 @@
-# Project template
-> Описание проект
+# Data Engineer templates
+
+> Здесь вы найдете набор шаблонов для проектов data engineer'a. Каждый проект содержит набор шаблонов:
+* `project` - шаблон базового проекта инженера
+* `ad-hoc` - расширяемый шаблон для срочных / временных задач
+* `queryLib` - шаблон (с pl\sql скриптами) для инженера sql
+
+> На основе данных шаблнов можно создать git template ([git doc](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository))
+
+--------------
+> Проект содержит  набор файлов для упрощения использования git (смотри [Usage](#usage))
 
 <br>
 
 ### Содержание
-* [Install](#install)
-* [Usage](#usage)
+* [Использование](#usage)
+* [Полезности](#usage_h)
 * [Contributing & Collaborating & CodeReviewing](#contributing-collaborating-codeReviewing)
-* [Acknowledgments](#acknowledgments)
-* [Changelog](#changelog)
-* [Data metrics](#data-metrics)
+* [Изменения](#changelog)
 * [To-Do](#to-do)
-* [Releases](#releases)
+* [Релизы](#releases)
+
 <br>
 
-### Install
+### Использование
 
-> **[?]** Как начать использовать данные проекта
-
-<a name="instal"></a>
-```python
-# import as usually
-import MY_BEAUTYFUL_LIB
-```
-
-## Usage
-
-> **[?]** Направление проекта
+> **[!]** Проект используется в рамках git flow DE. Для упрощения работы со схемой git flow DE можно использовать следующие скрипты (на их основе разработать / доработать свой процесс)
 
 <a name="usage"></a>
 
-### Usage
+#### createTemplate.sh
+```bash
+# создание / разворачивание проекта
 
-> **[?]** Как использовать проект
+
+bash createTemplate.sh PROJECT_TYPE -bb branchName
+
+# PROJECT_TYPE - project type
+# -bb - ключ для добавления базовых веток (git flow). Без веток -n
+# branchName - имя ветки с который вы начнете данный проект (базовая ветка: master, dev & etc)
+
+# доступные ветки "dev, feature, fix, adhoc, integration, release, held, controlTest"
+```
+
+-------------
+
+#### changeAddOrigin.sh
+
+```bash
+# изменение или добавлене удаленного репозитория
+
+bash changeAddOrigin.sh -a remote_name path
+
+# -a - ключ действия (доступны -a - добавить / -c - изменить / -r - переименовать)
+# remote_name - имя ориджина которое будет использоваться
+# paht - путь до удаленного репозитория (пример ssh/https://some_path)
+
+```
+
+-------------
+
+#### addBranch.sh
+
+```bash
+# добавить новую ветку и начать в ней работу
+
+bash addBranch.sh branch task
+
+# branch - имя ветки, которую вы хотите добавить
+# task - наименование задачи для которой создается ветка
+```
+
+-------------
+
+#### push.sh
+
+```bash
+# загрузка проекта на удаленный репозиторий
+
+bash push.sh -type remote branch
+
+# -type - указать тип загрузки изменени на удаленный репозиторий (доступные типы: -c - обычный тип загрузки в текущий ориджин и ветку / -s - установка ориджина и ветки куда будет совершена загрузка)
+# remote - имя ориджина (если тип -s)
+# branch - имя ветки (если тип -s)
+```
+
+
+-------------
+
+#### pull.sh
+
+```bash
+# загрузка проекта из удаленного репозитория
+
+bash pull.sh -r branch remote
+
+# -r - тип пулл процесса (доступные: -r = rebase | -nr - без rebase)
+# branch - установить ветку из которой будет загрузка
+# remote - установка ориджин ( если ветка установлена, то обязательно установить ориджин)
+```
+
+
+-------------
+
+#### mergeTo.sh
+
+```bash
+# мердж процесс ветки в основную ветку
+
+bash mergeTo.sh branch
+
+# branch - имя ветки куда будет слияние
+```
+
+
+### Полезности
+
+> **[!]** Полезные скрипты, которые делают git flow проще
+
+<a name="usage_h"></a>
+
+#### createSSHKey.sh
+
+```bash
+# добавление ключа ssh для git (работаем с git без логина/пароля)
+
+bash createSSHKey.sh
+```
+
+
+
 
 ### Contributing & Collaborating & CodeReviewing
 
 <a name="contributing-collaborating-codeReviewing"></a>
 
-> **[?]** Ссыли на правила взаимодействия по проекту. Примеры:
+> **[!]** Ссыли на правила взаимодействия по проекту.
 
-[CONTRIBUTING.md](CONTRIBUTING.md)
+Для крос-командного проекта необходимо вести следующие документы:
 
-[COLLABORATING.md](COLLABORATING.md)
+* [CONTRIBUTING.md](templates/project/CONTRIBUTING.md)
 
-[CODEREVIEW.md](CodeReview.md)
+* [COLLABORATING.md](templates/project/COLLABORATING.md)
 
-Для крос-командного проекта необходимо вести [список участников](CONTRIBUTORS.md)
+Для всех проектов код ревью:
 
-### Acknowledgments :thumbsup:
-
-<a name="acknowledgments"></a>
-
-> **[?]** Описание особенностей использование или используемых библиотек (полезно, если есть что-то не стандартное):
+* [CODEREVIEW.md](templates/project/CODEREVIEW.md)
 
 
-### Changelog :memo:
+
+### Изменения :memo:
 
 <a name="changelog"></a>
 
-> **[?]** В основном readme или в специальном файле стоит вести `CHANGELOG`, который выступает в виде истории изменений `HISTORY`. Также можно использовать Wiki
-
-
-### Data metrics
-
-<a name="data-metrics"></a>
-
-> **[?]** Описываем основные результаты. Можно поставить скриншоты или результаты работы, котоыре отражают результаты data-модели или base line
+ - [x] Добавлены (но не тестированы) скрипты - автоматизаторы github
+ - [x] Добавлены шаблоны
 
 
 ### To-Do :man:
 
 <a name="to-do"></a>
 
-> **[?]** Если проект в разработке, то можно проецировать ключевые этапы. Если проект будет _"заморожен"_, то поможет быстро вернуться к проекту
-
-- [x] Сделать base line
-- [ ] Добавить новые данные в модель
-- [ ] "Тюнинг" модели ...
+- [ ] Тестирование и доработка скриптов
+- [ ] Внедрить шаблон spark - project
+- [ ] Внедрить шаблон отчетов (профилирование данных, тестирование кода, профилирование модели (машинного обучения))
 
 
-### Releases
+
+### Релизы
 
 <a name="releases"></a>
 
-> **[?]** Заполняется по правилу: tag релизала - для чего зделан, его особенности и тп.
-
+* v.0.1 - релиз для статьи о DE git flow (сделан MVP процесса, готов к постой )

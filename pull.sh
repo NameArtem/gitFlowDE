@@ -43,10 +43,8 @@ fi
 # echo "Fetching from $REMOTE..."
 
 echo "Fetching from $REMOTE..."
-<<<<<<< Updated upstream
 git fetch $REMOTE $BRANCH
-=======
->>>>>>> Stashed changes
+
 # git fetch $REMOTE
 
 

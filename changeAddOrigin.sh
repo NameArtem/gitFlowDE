@@ -38,7 +38,7 @@ elif [ $1 == '-r' ]; then
 
 else
 
-	echo 'Check first parameter'
+	echo 'Check the first parameter'
 
 fi
 

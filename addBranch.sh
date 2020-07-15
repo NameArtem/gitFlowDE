@@ -4,7 +4,7 @@
 # $1 - branch (dev, release, held and etc)
 # $2 - task (on Jira, on your task manager and etc)
 ######################
-### func
+### funcs
 #
 require_name_arg() {
 	if [ -z $1 ]; then
@@ -92,7 +92,7 @@ echo "Summary of actions:"
 echo "- A new branch '$BRANCH-$TASK' was created, based on '$BRANCH'"
 echo "- You are now on branch '$BRANCH-$TASK'"
 echo ""
-echo "Now, start committing on your feature."
+echo "Now, start committing."
 echo ""
 
 exit 0
