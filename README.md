@@ -1,4 +1,4 @@
-# Data Engineer templates
+# Data Engineer templates :rocket:
 
 > Здесь вы найдете набор шаблонов для проектов data engineer'a. Каждый проект содержит набор шаблонов:
 * `project` - шаблон базового проекта инженера
@@ -10,9 +10,11 @@
 --------------
 > Проект содержит  набор файлов для упрощения использования git (смотри [Usage](#usage))
 
+> Ознакомиться со [статьей]() о DE git flow
+
 <br>
 
-### Содержание
+### Содержание :pencil:
 * [Использование](#usage)
 * [Полезности](#usage_h)
 * [Contributing & Collaborating & CodeReviewing](#contributing-collaborating-codeReviewing)
@@ -22,7 +24,7 @@
 
 <br>
 
-### Использование
+### Использование :construction_worker:
 
 > **[!]** Проект используется в рамках git flow DE. Для упрощения работы со схемой git flow DE можно использовать следующие скрипты (на их основе разработать / доработать свой процесс)
 
@@ -113,7 +115,7 @@ bash mergeTo.sh branch
 ```
 
 
-### Полезности
+### Полезности :sparkles:
 
 > **[!]** Полезные скрипты, которые делают git flow проще
 
@@ -130,7 +132,7 @@ bash createSSHKey.sh
 
 
 
-### Contributing & Collaborating & CodeReviewing
+### Contributing & Collaborating & CodeReviewing :label:
 
 <a name="contributing-collaborating-codeReviewing"></a>
 
@@ -148,7 +150,7 @@ bash createSSHKey.sh
 
 
 
-### Изменения :memo:
+### Изменения :white_check_mark:
 
 <a name="changelog"></a>
 
@@ -156,7 +158,7 @@ bash createSSHKey.sh
  - [x] Добавлены шаблоны
 
 
-### To-Do :man:
+### To-Do :construction:
 
 <a name="to-do"></a>
 
@@ -166,7 +168,7 @@ bash createSSHKey.sh
 
 
 
-### Релизы
+### Релизы :bookmark:
 
 <a name="releases"></a>
 
