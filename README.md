@@ -4,6 +4,7 @@
 * `project` - шаблон базового проекта инженера
 * `ad-hoc` - расширяемый шаблон для срочных / временных задач
 * `queryLib` - шаблон (с pl\sql скриптами) для инженера sql
+* `sparkTmp` - шаблон для проекта PySpark
 
 > На основе данных шаблнов можно создать git template ([git doc](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository))
 
